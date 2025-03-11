@@ -1,0 +1,82 @@
+   @font-face {
+
+      font-family: Eina01-Semi-Bold;
+      src: url(../../../assets/fuentes/Eina01-SemiBold.ttf);
+   }
+
+   .body {
+      width: 100wvw;
+      height: 100vh;
+      display: flex;
+      font-family: Eina01-Semi-Bold;
+      background-size: 100%;
+      background-image: url("../../../assets/imagenes/OtrasFomas.jpg");
+   }
+
+   #menuInicio {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      height: 50%;
+      margin: auto;
+   }
+
+   #menuInicio h1 {
+      font-size: clamp(2rem, 1.7rem + 1.5vw, 3.5rem);
+      color: white;
+      letter-spacing: 0.5rem;
+      text-align: center;
+   }
+
+   #menuInicio ul {
+      display: flex;
+      list-style: none;
+      margin: auto;
+   }
+
+   #menuInicio a {
+      text-decoration: none;
+   }
+
+   #menuInicio li {
+      text-align: center;
+      font-size: clamp(1rem, 0.9rem + 0.5vw, 1.5rem);
+      letter-spacing: 0.1rem;
+      color: white;
+      padding: 1rem;
+   }
+
+   #menuInicio li:hover {
+      text-decoration: underline;
+      background-color: #0064938e;
+   }
+
+   #idiomasInicio ul {
+      display: flex;
+      list-style: none;
+      position: absolute;
+      right: 5%;
+      top: 1%;
+   }
+
+   #idiomas a {
+      text-decoration: none;
+   }
+
+   #idiomasInicio li {
+      font-size: clamp(0.5rem, 0.4rem + 0.5vw, 1rem);
+      color: white;
+      padding: 0.5rem;
+   }
+
+   #idiomasInicio li:hover {
+      text-decoration: underline;
+      background-color: #c67a79a4;
+   }
+
+   @media screen and (max-width: 768px) {
+      #menuInicio ul {
+         flex-direction: column;
+      }
+
+   }

@@ -1,0 +1,35 @@
+<body class="body" *ngIf="showPortada or showBiografia or showProyectos or showBlog or showContacto">
+   <!-- showPortada or showBiografia or showProyectos or showBlog or showContacto -->
+   <section id="menuInicio">
+      <h1>LÉA THIEUX</h1>
+      <ul>
+         <a routerLink="/biografia" >
+            <li>BIOGRAFÍA</li>
+         </a>
+         <a routerLink="/proyectos">
+            <li>PROYECTOS</li>
+         </a>
+         <a routerLink="/blog" >
+            <li>BLOG</li>
+         </a>
+         <a routerLink="/contacto" >
+            <li>CONTACTO</li>
+         </a>
+      </ul>
+   </section>
+   <section id="idiomasInicio">
+      <ul>
+         <a href="">
+            <li>ESP</li>
+         </a>
+         <a href="">
+            <li>FRA</li>
+         </a>
+         <a href="">
+            <li>ENG</li>
+         </a>
+      </ul>
+   </section>
+
+</body>
+<router-outlet/>
