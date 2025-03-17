@@ -1,15 +1,4 @@
-// import { Component } from '@angular/core';
-// import { RouterLink, RouterOutlet } from '@angular/router';
 
-// @Component({
-//   selector: 'app-proyectos',
-//   imports: [RouterLink,RouterOutlet],
-//   templateUrl: './proyectos.component.html',
-//   styleUrl: './proyectos.component.css'
-// })
-// export class ProyectosComponent {
-
-// }
 import { Component, OnInit } from '@angular/core';
 // import Swiper JS
 import { Swiper } from 'swiper/bundle';
@@ -39,34 +28,35 @@ export class ProyectosComponent implements OnInit {
 
       // If we need pagination
       pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
+      el: '.swiper-pagination',
+      clickable: true,
       },
 
       // Navigation arrows
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-        
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+      
       },
 
       // And if we need scrollbar
       scrollbar: {
-        el: '.swiper-scrollbar',
-        draggable: true,
-        
+      el: '.swiper-scrollbar',
+      draggable: true,
+      
       },
       effect: 'cube',
       cubeEffect: {
-        shadow: true,
-        slideShadows: true,
-        shadowOffset: 100,
-        shadowScale: 1,
+      shadow: true,
+      slideShadows: true,
+      shadowOffset: 100,
+      shadowScale: 1,
       },
       autoplay: {
-        delay: 3000,
+      delay: 3000,
       },
     });
+
   }
   
 }

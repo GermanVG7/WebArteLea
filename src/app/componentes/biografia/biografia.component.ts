@@ -3,10 +3,11 @@ import {Router, NavigationEnd, RouterLink, RouterOutlet } from '@angular/router'
 
 @Component({
   selector: 'app-biografia',
-  imports: [RouterOutlet,RouterLink],
+  imports: [RouterLink],
   templateUrl: './biografia.component.html',
   styleUrl: './biografia.component.css'
 })
 export class BiografiaComponent {
+  
  
 }
