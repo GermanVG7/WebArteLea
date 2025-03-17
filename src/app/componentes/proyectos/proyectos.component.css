@@ -1,0 +1,24 @@
+.swiper {
+    width: 600px;
+    height: 300px;
+  }
+ 
+  .swiper-pagination {
+    border-radius: 50px;
+    /* background-color: #413e3c; */
+    bottom: -40px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: auto; 
+  }
+  /* Estilo para cambiar el tamaño de la paginación */
+.swiper-pagination-bullet {
+    width: 600px; /* Ancho de los puntos de paginación */
+    height: 10px; /* Altura de los puntos de paginación */
+    background-color: #007bff; /* Color de fondo de los puntos de paginación */
+    opacity: 1; /* Opacidad de los puntos de paginación */
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #ff0000; /* Color de fondo de los puntos de paginación activos */
+}
