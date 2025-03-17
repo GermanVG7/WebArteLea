@@ -60,12 +60,12 @@ export class ProyectosComponent implements OnInit {
       cubeEffect: {
         shadow: true,
         slideShadows: true,
-        shadowOffset: 30,
+        shadowOffset: 100,
         shadowScale: 1,
       },
-      // autoplay: {
-      //   delay: 3000,
-      // },
+      autoplay: {
+        delay: 3000,
+      },
     });
   }
   

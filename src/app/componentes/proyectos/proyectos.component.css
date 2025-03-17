@@ -3,7 +3,7 @@
     height: 300px;
   }
  
-  .swiper-pagination {
+  .swiper-pagination  {
     border-radius: 50px;
     /* background-color: #413e3c; */
     bottom: -40px; 
@@ -15,7 +15,7 @@
 .swiper-pagination-bullet {
     width: 600px; /* Ancho de los puntos de paginación */
     height: 10px; /* Altura de los puntos de paginación */
-    background-color: #007bff; /* Color de fondo de los puntos de paginación */
+    background-color: #e121eb; /* Color de fondo de los puntos de paginación */
     opacity: 1; /* Opacidad de los puntos de paginación */
 }
 
