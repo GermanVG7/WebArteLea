@@ -1,14 +1,12 @@
 
 import { Component, OnInit } from '@angular/core';
-// import Swiper JS
 import { Swiper } from 'swiper/bundle';
-
-// import styles bundle
 import 'swiper/css/bundle';
+import { MenuPrincipalComponent } from '../menu-principal/menu-principal.component';
 
 @Component({
   selector: 'app-proyectos',
-  imports: [],
+  imports: [MenuPrincipalComponent],
   templateUrl: './proyectos.component.html',
   styleUrl: './proyectos.component.css'
 })

@@ -1,26 +1,23 @@
 .swiper {
     width: 55vw;
     height: 60vh;
-    top: 0;
+    top: -10rem;
   }
  
   .swiper-pagination  {
-    border-radius: 50px;
-    /* background-color: #413e3c; */
     bottom: -40px; 
     left: 50%; 
     transform: translateX(-50%); 
     width: auto; 
   }
-
   .swiper-slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-
-  ul{
+ 
+  app-menu-principal{
     position: relative;
-    top: 10rem;
+    top: 5rem;
     left: 2rem;
   }
