@@ -5,13 +5,13 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [PortadaComponent, RouterOutlet, CommonModule, RouterLink],
+  imports: [ RouterOutlet, CommonModule, RouterLink],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'WebArteLea';
-  mostrar = true;
+  mostrar = false;
   constructor(private router: Router) {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
