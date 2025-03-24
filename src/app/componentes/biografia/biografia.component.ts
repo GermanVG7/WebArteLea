@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import {Router, NavigationEnd, RouterLink, RouterOutlet } from '@angular/router';
+import { MenuPrincipalComponent } from '../menu-principal/menu-principal.component';
 
 @Component({
   selector: 'app-biografia',
-  imports: [RouterLink],
+  imports: [MenuPrincipalComponent],
   templateUrl: './biografia.component.html',
   styleUrl: './biografia.component.css'
 })

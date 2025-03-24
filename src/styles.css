@@ -3,3 +3,8 @@
   padding: 0;
   box-sizing: border-box;
 }
+app-menu-principal{
+  position: sticky;
+  top: 5rem;
+  left: 2rem;
+}
