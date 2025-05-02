@@ -3,7 +3,6 @@ import { Component, OnInit } from '@angular/core';
 import { Swiper } from 'swiper/bundle';
 import 'swiper/css/bundle';
 import { MenuPrincipalComponent } from '../menu-principal/menu-principal.component';
-import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-proyectos',
@@ -18,7 +17,7 @@ export class ProyectosComponent implements OnInit {
     swiper = new Swiper('.swiper', {
       direction: 'horizontal',
       loop: true,
-      speed: 3500,
+      speed: 3000,
       
       grabCursor: true,
       centeredSlides: true,
