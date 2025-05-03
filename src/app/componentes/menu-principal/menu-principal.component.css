@@ -1,0 +1,8 @@
+#menu-dropdown {
+    position: sticky;
+    top: 2rem; /* Ajusta según sea necesario */
+    left: 1vw;
+    width: 20vw;
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+}
+

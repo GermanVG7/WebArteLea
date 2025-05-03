@@ -5,6 +5,7 @@ import { BlogComponent } from './componentes/blog/blog.component';
 import { ContactoComponent } from './componentes/contacto/contacto.component';
 import { AppComponent } from './app.component';
 
+
 export const routes: Routes = [
     {path: '', component: AppComponent},
     {path: 'biografia', component: BiografiaComponent}, 

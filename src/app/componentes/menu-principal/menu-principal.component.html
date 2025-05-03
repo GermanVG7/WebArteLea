@@ -1,15 +1,20 @@
 
-<dashboard-ng19-sidebar class="top-bar__side-bar" ></dashboard-ng19-sidebar>
-<!-- <app-navbar></app-navbar> -->
-
-
-<!-- 
-<ul class="nav flex-column">
+<ul id="menu-dropdown" class="nav flex-column">
     <li class="nav-item">
       <a class="nav-link active" aria-current="page" routerLink="/" href="">INICIO</a>
     </li>
-    <li class="nav-item">
+    <!-- <li class="nav-item">
       <a class="nav-link" href="" routerLinkActive="active" routerLink="/biografia">BÍO/CV</a>
+    </li> -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="" role="button" routerLink="/biografia" routerLinkActive="active" aria-expanded="false" >BÍO/CV  </a> 
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" routerLink="../biografia" fragment="bio-cv" >BIOGRAFIA / CV</a></li>
+        <li><a class="dropdown-item" href="../biografia/#bio-cv">EXPOSICIONES PERSONALES</a></li>
+        <li><a class="dropdown-item" href="">EXPOSICIONES COLECTIVAS</a></li>
+        <li><a class="dropdown-item" href="">PUBLICACIONES</a></li>
+       
+      </ul>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="" routerLinkActive="active" routerLink="/proyectos">PROYECTOS</a>
@@ -20,5 +25,5 @@
       <li class="nav-item">
         <a class="nav-link" href="" routerLinkActive="active" routerLink="/contacto">CONTACTO</a>
       </li>
-  </ul> -->
+  </ul>
   <router-outlet></router-outlet>

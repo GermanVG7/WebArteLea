@@ -19,6 +19,8 @@
   body {
     width: 70vw;
     margin-left: 20vw;
+    position: relative;
+    top: -30vh;
   }
 
   /** SEPARADORES **/
