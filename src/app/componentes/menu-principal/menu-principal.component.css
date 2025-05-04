@@ -5,4 +5,12 @@
     width: 20vw;
     z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
 }
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block; /* Muestra la lista desplegable */
+}
+
+.dropdown-menu {
+    left: 2rem;
+    position: absolute;
+}
 
