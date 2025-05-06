@@ -3,67 +3,46 @@
         <div class="sb-sidenav-menu">
             <div class="nav">
                 <div class="sb-sidenav-menu-heading">PORTADA</div>
-                <a class="nav-link" href="">
-                    <div class=""></div>
-                    INICIO
+                <a class="nav-link" routerLink="/">
+                    <div class="sb-nav-link-icon"></div>
+                    Inicio
                 </a>
                 <div class="sb-sidenav-menu-heading">BIO / CV</div>
-                <a class="nav-link " href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                    <div class="sb-nav-link-icon"><i class=""></i></div>
-                    BIOGRAFIA
-                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                <a class="nav-link "  data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                    <div class="sb-nav-link-icon"></div>
+                    Biografia / CV
                 </a>
                 <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="layout-static.html">Static Navigation</a>
-                        <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a>
+                        <a class="nav-link" routerLink="/biografia">Exposiciones Personales</a>
+                        <a class="nav-link" routerLink="/biografia">Exposiciones Colectivas</a>
+                        <a class="nav-link" routerLink="/biografia">Publicaciones</a>
                     </nav>
                 </div>
-                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
-                    <div class="sb-nav-link-icon"><i class=""></i></div>PROYECTOS
-                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                <a class="nav-link  collapsed"   data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                    <div class="sb-nav-link-icon"></div>Proyectos
                 </a>
                 <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
-                            Authentication
-                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        <a class="nav-link collapsed" routerLink="/proyectos" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                            Formas de Vida
                         </a>
-                        <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
-                            <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="">Login</a>
-                                <a class="nav-link" href="">Register</a>
-                                <a class="nav-link" href="">Forgot Password</a>
-                            </nav>
-                        </div>
-                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
-                            Error
-                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                      
+                        <a class="nav-link collapsed" routerLink="/proyectos" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                            Ciclos y Dimensiones
                         </a>
-                        <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
-                            <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="">401 Page</a>
-                                <a class="nav-link" href="">404 Page</a>
-                                <a class="nav-link" href="">500 Page</a>
-                            </nav>
-                        </div>
                     </nav>
                 </div>
-                <div class="sb-sidenav-menu-heading">CONTACTO</div>
-                <a class="nav-link" routerLink="/charts">
-                    <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                    Charts
+                <div class="sb-sidenav-menu-heading">CONTACTOS</div>
+                <a class="nav-link" routerLink="/contacto">
+                    <div class="sb-nav-link-icon"></div> Contactar con nosotros
                 </a>
-                <a class="nav-link" routerLink="/tables">
-                    <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                    Tables
+                <a class="nav-link" routerLink="/blog">
+                    <div class="sb-nav-link-icon"></div> Blog
                 </a>
             </div>
         </div>
-        <div class="sb-sidenav-footer">
-            <div class="small">Logged in as:</div>
-            Start Bootstrap
-        </div>
+      
     </nav>
 </div>
 
