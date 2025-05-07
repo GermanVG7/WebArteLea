@@ -9,8 +9,8 @@
                <span aria-hidden="true">&laquo;</span>
            </a>
        </li>
-       <li class="page-item " id="btn1"><a class="page-link " routerLink="/datos-basicos">11</a></li>
-       <li class="page-item" id="btn2"><a class="page-link" routerLink="/proyecto" >2</a></li>
+       <li class="page-item " id="btn1"><a class="page-link " routerLink="/datos-basicos">1</a></li>
+       <li class="page-item" id="btn2"><a class="page-link" routerLink="/proyectos">2</a></li>
        <li class="page-item" id="btn3"><a class="page-link" routerLink="/blog">3</a></li>
        <li class="page-item" id="siguiente">
            <a class="page-link" href="#" aria-label="Next">
@@ -19,7 +19,17 @@
        </li>
    </ul>
 </nav>
+
+<h1>Angular Router App</h1>
+<nav>
+  <ul>
+    <li><a routerLink="/first" routerLinkActive="active" ariaCurrentWhenActive="page">First Component</a></li>
+    <li><a routerLink="/second" routerLinkActive="active" ariaCurrentWhenActive="page">Second Component</a></li>
+  </ul>
+</nav>
 <router-outlet></router-outlet>
+
+
 
     <!-- <app-nav-formulario></app-nav-formulario> -->
  <!-- <app-datos-basicos></app-datos-basicos> -->

@@ -5,7 +5,7 @@ import { NavFormularioComponent } from '../nav-formulario/nav-formulario.compone
 
 @Component({
   selector: 'app-menu-principal',
-  imports: [RouterLink,RouterOutlet,RouterLinkActive,SidebarComponent,NavFormularioComponent,NavFormularioComponent],
+  imports: [SidebarComponent,SidebarComponent],
   templateUrl: './menu-principal.component.html',
   styleUrl: './menu-principal.component.css'
 })

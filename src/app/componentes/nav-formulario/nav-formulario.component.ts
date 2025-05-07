@@ -4,7 +4,7 @@ import { MenuPrincipalComponent } from '../menu-principal/menu-principal.compone
 
 @Component({
   selector: 'app-nav-formulario',
-  imports: [RouterLink,RouterOutlet,MenuPrincipalComponent],
+  imports: [RouterLink],
   templateUrl: './nav-formulario.component.html',
   styleUrl: './nav-formulario.component.css'
 })
