@@ -16,7 +16,7 @@ export class AppComponent {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         this.mostrar = !event.url.includes('/biografia') && !event.url.includes('/proyectos')
-          && !event.url.includes('/blog') && !event.url.includes('/contacto');
+          && !event.url.includes('/blog') && !event.url.includes('/contacto') && !event.url.includes('/formas-de-vida');
       }
     });
   }

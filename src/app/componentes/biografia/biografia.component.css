@@ -102,7 +102,20 @@
   /** ESTILO TARJETAS **/
   .card {
     border-color: #006493;
-    width: 27rem;
+    width: 25rem;
+  }
+
+  .marco {
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    height: 15rem; /* Ajusta la altura automáticamente */
+    margin-bottom: 0;
+    overflow: hidden; /* Oculta cualquier contenido que se salga del contenedor */
+  }
+  
+  .marco img {
+    width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+    height: 100%; /* Ajusta la altura de la imagen al 100% del contenedor */
+    object-fit: cover; /* Asegura que la imagen se recorte para llenar el contenedor */
   }
 
   .card-title {
@@ -115,15 +128,6 @@
     font-family: Eina01-Semi-Bold;
     color: #006493;
     letter-spacing: 0.1rem;
-  }
-
-  .btn {
-    background-color: #006493;
-    border-color: #006493;
-  }
-
-  .btn:hover {
-    background-color: #c67a79;
   }
 
   .filaCards {
