@@ -3,10 +3,12 @@ import { Component, OnInit } from '@angular/core';
 import { Swiper } from 'swiper/bundle';
 import 'swiper/css/bundle';
 import { MenuPrincipalComponent } from '../menu-principal/menu-principal.component';
+import { FormasDeVidaComponent } from '../formas-de-vida/formas-de-vida.component';
+import { CiclosyDimensionesComponent } from '../ciclosy-dimensiones/ciclosy-dimensiones.component';
 
 @Component({
   selector: 'app-proyectos',
-  imports: [MenuPrincipalComponent],
+  imports: [MenuPrincipalComponent, FormasDeVidaComponent, CiclosyDimensionesComponent],
   templateUrl: './proyectos.component.html',
   styleUrl: './proyectos.component.css'
 })

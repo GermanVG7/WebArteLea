@@ -1,14 +1,16 @@
-.swiper {
-    width: 55vw;
+  .swiper {
+    width: 50vw;
     height: 60vh;
-    top: 1rem;
+    margin-left: 30vw;
+    top: 10vh;
+    bottom: 15vh;
   }
  
   .swiper-pagination  {
     bottom: -40px; 
     left: 50%; 
     transform: translateX(-50%); 
-    width: auto; 
+    width: auto;
   }
   .swiper-slide img {
     width: 100%;

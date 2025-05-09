@@ -5,6 +5,8 @@ import { BlogComponent } from './componentes/blog/blog.component';
 import { ContactoComponent } from './componentes/contacto/contacto.component';
 import { AppComponent } from './app.component';
 import { DatosBasicosComponent } from './componentes/datos-basicos/datos-basicos.component';
+import { FormasDeVidaComponent } from './componentes/formas-de-vida/formas-de-vida.component';
+import { CiclosyDimensionesComponent } from './componentes/ciclosy-dimensiones/ciclosy-dimensiones.component';
 
 
 export const routes: Routes = [
@@ -15,4 +17,6 @@ export const routes: Routes = [
     {path: 'contacto', component: ContactoComponent}, 
     {path: 'datos-basicos',component:DatosBasicosComponent},
 
+    {path: 'formas-de-vida', component: FormasDeVidaComponent},
+    {path: 'ciclos-dimensiones', component: CiclosyDimensionesComponent}
 ];
