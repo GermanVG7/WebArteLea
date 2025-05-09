@@ -4,7 +4,7 @@ import { MenuPrincipalComponent } from '../menu-principal/menu-principal.compone
 
 @Component({
   selector: 'app-contacto',
-  imports: [RouterLink,RouterOutlet,RouterLinkActive,MenuPrincipalComponent],
+  imports: [MenuPrincipalComponent,RouterOutlet],
   templateUrl: './contacto.component.html',
   styleUrl: './contacto.component.css'
 })
