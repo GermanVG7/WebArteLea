@@ -2,7 +2,7 @@
  <app-menu-principal></app-menu-principal>
 
  <body>
-    <section class="container mt-1 " id="formulario">
+    <section class="container mt-1 bg-primary-subtlemno " id="formulario">
         <h1 class="text-center" id="titulo">Formulario de Contacto</h1>
         <form action="#" method="get" class="mt-2">
             <section id="parte1" class="">
@@ -57,7 +57,7 @@
                         <label for="no-binario" class="form-label">No binario</label>
                     </div>
                 </fieldset>
-                <h4 class="text-center mt-4">Datos Basicos</h4>
+                <h4 class="text-center mt-1">Datos Basicos</h4>
             </section>
             <section id="parte2">
                 <select class="form-select mb-1">
@@ -92,29 +92,29 @@
                 </select>
                 <div class="mb-1">
                     <label for="calle" class="mx-2">Calle</label>
-                    <input type="text" class="form-control" id="calle" placeholder="" required>
+                    <input type="text" class="form-control form-control-sm " id="calle" placeholder="" required>
                 </div>
                 <div class="mb-1">
                     <label for="portal" class="mx-2">Numero de Portal</label>
-                    <input type="number" class="form-control" id="portal" placeholder="" required>
+                    <input type="number" class="form-control form-control-sm" id="portal" placeholder="" required>
 
                 </div>
                 <div class="mb-1">
                     <label for="piso" class="mx-2">Piso </label>
-                    <input type="number" class="form-control " id="piso" placeholder="" required>
+                    <input type="number" class="form-control form-control-sm " id="piso" placeholder="" required>
                 </div>
                 <div class="mb-1">
                     <label for="direccion" class="mx-2">Puerta</label>
-                    <input type="text" class="form-control" id="direccion" placeholder="" required>
+                    <input type="text" class="form-control form-control-sm" id="direccion" placeholder="" required>
                 </div>
                 <div class="mb-1">
                     <label for="cp" class="mx-2">Codigo Postal</label>
-                    <input type="number" class="form-control " id="cp" placeholder="" required>
+                    <input type="number" class="form-control form-control-sm " id="cp" placeholder="" required>
 
                 </div>
 
 
-                <h4 class="text-center">Datos de Direccion</h4>
+                <h4 class="text-center mt-3">Datos de Direccion</h4>
             </section>
             <section id="parte3" >
                 <section class="d-flex flex-column align-items-center">
@@ -152,7 +152,7 @@
                     <button type="reset" class="btn btn-outline-primary me-4">Limpiar Campos</button>
                     <button type="submit" class="btn btn-primary">Enviar</button>
                 </div>
-                <h4 class="text-center mt-4">Politicas de Privacidad</h4>                    
+                <h4 class="text-center mt-2">Politicas de Privacidad</h4>                    
                 </section>
 
 
@@ -161,7 +161,7 @@
             <nav aria-label="Page navigation example ">
                 <ul class="pagination justify-content-center ">
                     <li class="page-item disabled" id="anterior">
-                        <a class="page-link" href="" (click)="visiblePrevio()" aria-label="Previous">
+                        <a class="page-link"  (click)="visiblePrevio()" aria-label="Previous">
                             <span aria-hidden="true">&laquo;</span>
                         </a>
                     </li>
@@ -169,7 +169,7 @@
                     <li class="page-item" id="btn2"><a class="page-link" (click)="visibleBoton2()">2</a></li>
                     <li class="page-item" id="btn3"><a class="page-link" (click)="visibleBoton3()" >3</a></li>
                     <li class="page-item" id="siguiente">
-                        <a class="page-link" href="" (click)="visibleSiguiente()" aria-label="Next">
+                        <a class="page-link"  (click)="visibleSiguiente()" aria-label="Next">
                             <span aria-hidden="true">&raquo;</span>
                         </a>
                     </li>
