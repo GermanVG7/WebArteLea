@@ -1,0 +1,187 @@
+      /*** ESTABLECER BODY ***/
+      body {
+         width: 70vw;
+         margin-left: 20vw;
+       }
+ 
+       .separador3vh {
+         height: 3vh;
+       }
+ 
+       /*** HEADER ***/
+ 
+       /**ESTILO TITULO **/
+       header h1 {
+         font-family: Eina01-Semi-Bold;
+         font-weight: 300;
+         font-size: clamp(1rem, 0.6rem + 2vw, 3rem);
+         text-align: center;
+         letter-spacing: 0.2rem;
+         color: #006493;
+         margin-top: 20vh;
+       }
+ 
+       /*** GALERÍA RESPONSIVE ***/
+       main .contenedorGaleria {
+         width: 70vw;
+         margin: auto;
+         display: grid;
+         grid-template-columns: repeat(4, 1fr);
+         /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+         gap: 1rem;
+       }
+ 
+       main .contenedorGaleriaHorizontal{
+ 
+         width: 70vw;
+         margin: auto;
+         margin-top: 1rem;
+         margin-bottom: 1rem;
+         display: grid;
+         grid-template-columns: repeat(2, 1fr);
+         /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+         gap: 1rem;
+       }
+ 
+       /* Estilo para imágenes cuadradas */
+       .cuadrada {
+         aspect-ratio: 1 / 1;
+       }
+ 
+       /* Estilo para imágenes verticales */
+       .vertical {
+         aspect-ratio: 2 / 3;
+       }
+ 
+       /* Estilo para imágenes horizontales */
+       .horizontal {
+         aspect-ratio: 3 / 2;
+       }
+ 
+       main .contenedorGaleria img {
+         width: 100%;
+         object-fit: cover;
+       }
+ 
+       /* Contenedor para el texto */
+       main .contenedorGaleria .imagen-con-texto {
+         position: relative;
+         overflow: hidden;
+       }
+ 
+       main .contenedorGaleria .imagen-con-texto img {
+         width: 100%;
+         object-fit: cover;
+         transition: transform 0.3s ease;
+       }
+ 
+       main .contenedorGaleria .imagen-con-texto:hover img {
+         transform: scale(1.1); /* Efecto de zoom */
+       }
+ 
+       main .contenedorGaleria .imagen-con-texto span {
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         right: 0;
+         background: #006493; /* Fondo semitransparente */
+         color: white;
+         text-align: center;
+         padding: 0.5rem;
+         opacity: 0;
+         transition: opacity 0.3s ease;
+       }
+ 
+       main .contenedorGaleria .imagen-con-texto:hover span {
+         opacity: 1; /* Mostrar texto al pasar el ratón */
+       }
+ 
+       main .contenedorGaleriaHorizontal img {
+         width: 100%;
+         object-fit: cover;
+       }
+ 
+       /* Contenedor para el texto */
+       main .contenedorGaleriaHorizontal .imagen-con-texto {
+         position: relative;
+         overflow: hidden;
+       }
+ 
+       main .contenedorGaleriaHorizontal .imagen-con-texto img {
+         width: 100%;
+         object-fit: cover;
+         transition: transform 0.3s ease;
+       }
+ 
+       main .contenedorGaleriaHorizontal .imagen-con-texto:hover img {
+         transform: scale(1.1); /* Efecto de zoom */
+       }
+ 
+       main .contenedorGaleriaHorizontal .imagen-con-texto span {
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         right: 0;
+         background: #006493; /* Fondo semitransparente */
+         color: white;
+         text-align: center;
+         padding: 0.5rem;
+         opacity: 0;
+         transition: opacity 0.3s ease;
+       }
+ 
+       main .contenedorGaleriaHorizontal .imagen-con-texto:hover span {
+         opacity: 1; /* Mostrar texto al pasar el ratón */
+       }
+
+       .btn-descargar {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #006493;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        font-weight: bold;
+        text-align: center;
+        transition: background-color 0.3s ease;
+      }
+      
+      .btn-descargar:hover {
+        background-color: #004a70;
+      }
+ 
+ 
+       #redes {
+         display: flex;
+         position: relative;
+         top: 2rem;
+         width: 50%;
+         justify-content: space-between;
+         margin: auto;
+         text-align: center;
+       }
+ 
+       #redes a {
+         width: 25%;
+       }
+ 
+       #redes img {
+         max-width: 35%;
+         margin: auto;
+       }
+ 
+       #redes img:hover {
+         transform: scale(1.15);
+       }
+ 
+       #figurePie {
+         display: flex;
+         width: 100%;
+         margin: auto;
+       }
+ 
+       #figurePie img {
+         max-width: 100%;
+         margin: auto;
+       }
