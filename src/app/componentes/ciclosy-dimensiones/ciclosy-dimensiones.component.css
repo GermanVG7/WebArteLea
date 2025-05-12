@@ -221,10 +221,14 @@
   }
  
   @media (max-width: 1600px) {
-  main .contenedorGaleria {
-  grid-template-columns: repeat(3, 1fr); /* Tres columnas */
-
+    main .contenedorGaleria {
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
   }
+   .swiper{
+      width: 48vw;
+      height: 55vh;
+      margin-left: 32vw;
+   }
 }
 
 @media (max-width: 1200px) {
@@ -235,6 +239,20 @@
   main .contenedorGaleriaHorizontal {
   grid-template-columns: repeat(1, 1fr);
   }
+     .swiper{
+        width: 45vw;
+        height: 50vh;
+        margin-left: 33vw;
+   }
+}
+
+@media (max-width: 1000px){
+
+       .swiper{
+        width: 42vw;
+        height: 45vh;
+        margin-left: 35vw;
+   }
 }
 
 @media (max-width: 800px) {
@@ -242,4 +260,10 @@
   grid-template-columns: repeat(1, 1fr); /* Tres columnas */
 
   }
+
+  .swiper{
+    width: 40vw;
+    height: 40vh;
+    margin-left: 35vw;
+   }
 }
