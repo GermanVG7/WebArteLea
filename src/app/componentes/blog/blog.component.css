@@ -1,3 +1,76 @@
-p{
+h1{
  text-align: center;
+}
+/* #contenedor{
+    width: 98vw;
+    height: 90vh;
+    background-color: rgb(101, 101, 52);
+    margin: auto;
+} */
+
+#page {
+  display: grid;
+  width: 98vw;
+  height: 100vh;
+  grid-template:
+    [header-left] "head head" 10vh [header-right]
+    [main-left] ".  main" 1fr [main-right]
+    [footer-left] ".  foot" 30px [footer-right]
+    / 120px 1fr;
+    /* justify-content: right; */
+}
+
+header {
+  /* background-color: rgb(79, 203, 79); */
+  grid-area: head;
+  /* color: white; */
+}
+
+nav {
+  background-color: lightblue;
+  grid-area: nav;
+}
+
+main {
+  /* background-color: yellow; */
+  grid-area: main;
+  display: grid;
+  grid: 33% 33% 33% / 30% 60%;
+  justify-content: right;
+}
+main > div  {
+  /* background-color: rgb(141, 165, 141); */
+  /* border: 1px solid black; */
+  margin: 0.2rem;
+  
+}
+
+main>div>p{
+    font-family: Eina01-Semi-Bold;
+        font-weight: 300;
+        font-size: clamp(1rem, 0.6rem + 2vw, 3rem);
+        text-align: center;
+        letter-spacing: 0.2rem;
+        color: #006493;
+}
+.descripcion {
+  /* background-color: rgb(75, 105, 124); */
+  /* border: 1px solid black; */
+  margin: 0.2rem;
+}
+footer {
+  background-color: rgb(93, 106, 129);
+  grid-area: foot;
+}
+
+figure{
+    height: 100%;
+    background-color: black;
+    max-height: 100%;
+}
+
+figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover ;
 }
