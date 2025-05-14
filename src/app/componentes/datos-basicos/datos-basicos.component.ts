@@ -4,7 +4,7 @@ import { NavFormularioComponent } from '../nav-formulario/nav-formulario.compone
 
 @Component({
   selector: 'app-datos-basicos',
-  imports: [],
+  imports: [MenuPrincipalComponent],
   templateUrl: './datos-basicos.component.html',
   styleUrl: './datos-basicos.component.css'
 })
