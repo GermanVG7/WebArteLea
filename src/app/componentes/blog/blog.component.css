@@ -13,11 +13,10 @@ h1{
   width: 98vw;
   height: 100vh;
   grid-template:
-    [header-left] "head head" 10vh [header-right]
-    [main-left] ".  main" 1fr [main-right]
-    [footer-left] ".  foot" 30px [footer-right]
-    / 120px 1fr;
-    /* justify-content: right; */
+     "head head" 10vh [header-right]
+     ".  main" 1fr [main-right]
+     ".  foot" 40vh 
+    / 20vw 1fr;
 }
 
 header {
@@ -36,31 +35,44 @@ main {
   grid-area: main;
   display: grid;
   grid: 33% 33% 33% / 30% 60%;
-  justify-content: right;
+  justify-content: left;
 }
 main > div  {
   /* background-color: rgb(141, 165, 141); */
   /* border: 1px solid black; */
-  margin: 0.2rem;
+  margin: 1rem;
   
+}
+main > div > figure> img {
+  transition: transform 0.3s ease;
+}
+main > div>figure>img:hover {
+  transform: scale(1.05); /* Efecto de zoom */
 }
 
 main>div>p{
     font-family: Eina01-Semi-Bold;
         font-weight: 300;
-        font-size: clamp(1rem, 0.6rem + 2vw, 3rem);
-        text-align: center;
+        font-size: clamp(0.2rem, 0.6rem + 2vw, 1rem);
+        text-align: left;
         letter-spacing: 0.2rem;
         color: #006493;
 }
+main>div span{
+    font-family: Eina01-Semi-Bold;
+        /* font-weight: 300; */
+        font-size: clamp(0.1rem, 0.6rem + 2vw, 0.7rem);
+        text-align: right;
+        letter-spacing: 0.2rem;
+        color: #607e8c;
+}
 .descripcion {
-  /* background-color: rgb(75, 105, 124); */
-  /* border: 1px solid black; */
   margin: 0.2rem;
 }
 footer {
-  background-color: rgb(93, 106, 129);
+  /* background-color: rgb(93, 106, 129); */
   grid-area: foot;
+  width: 70vw;
 }
 
 figure{
@@ -74,3 +86,42 @@ figure img{
     height: 100%;
     object-fit: cover ;
 }
+
+/*footer**/
+
+
+       #redes {
+        width: 70vw;
+         /* margin-left: 20vw; */
+         display: flex;
+         position: relative;
+         top: 2rem;
+         width: 50%;
+         justify-content: space-between;
+         margin: auto;
+         text-align: center;
+       }
+ 
+       #redes a {
+         width: 25%;
+       }
+ 
+       #redes img {
+         max-width: 35%;
+         margin: auto;
+       }
+ 
+       #redes img:hover {
+         transform: scale(1.15);
+       }
+ 
+       #figurePie {
+         display: flex;
+         width: 100%;
+         margin: auto;
+       }
+ 
+       #figurePie img {
+         max-width: 100%;
+         margin: auto;
+       }
