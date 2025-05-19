@@ -1,187 +1,174 @@
- /*** CARGAR FUENTE ***/
- @font-face {
-    font-family: Eina01-Semi-Bold;
-    src: url(/fuente/Eina01-SemiBold.ttf);
-  }
-  @font-face {
-    font-family: Eina01-Regular;
-    src: url(/fuente/Eina01-Regular.ttf);
-  }
+/*** CARGAR FUENTE ***/
+@font-face {
+  font-family: Eina01-Semi-Bold;
+  src: url(/fuente/Eina01-SemiBold.ttf);
+}
+@font-face {
+  font-family: Eina01-Regular;
+  src: url(/fuente/Eina01-Regular.ttf);
+}
 
-  /*** RESETEO PORPIEDADES ***/
-  /* * {
+/*** RESETEO PORPIEDADES ***/
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   } */
 
-  /*** ESTABLECER BODY ***/
-  body {
-    width: 70vw;
-    margin-left: 20vw;
-    position: relative;
-    top: 1rem;
-  }
+/*** ESTABLECER BODY ***/
+body {
+  width: 70vw;
+  margin-left: 20vw;
+  position: relative;
+  top: 1rem;
+}
 
-  /** SEPARADORES **/
-  .separador7vh {
-    height: 7vh;
-  }
+/** SEPARADORES **/
+.separador7vh {
+  height: 7vh;
+}
 
-  .separador5vh {
-    height: 5vh;
-  }
+.separador5vh {
+  height: 5vh;
+}
 
-  .separador3vh {
+.separador3vh {
+  height: 3vh;
+}
 
-     height: 3vh;
-  }
+.separdor1-5vh {
+  height: 1.5vh;
+}
 
-  .separdor1-5vh {
+/*** HEADER ***/
 
-     height: 1.5vh;
-  }
+/**ESTILO TITULO BIO **/
+header h1 {
+  font-family: Eina01-Semi-Bold;
+  font-weight: 300;
+  font-size: clamp(1rem, 0.6rem + 2vw, 3rem);
+  text-align: center;
+  letter-spacing: 0.2rem;
+  color: #006493;
+}
 
-  /*** HEADER ***/
+/** IMAGEN/TEXTO BIO **/
+header .card {
+  width: 100%;
+  border: none;
+}
 
-  /**ESTILO TITULO BIO **/
-  header h1 {
-    font-family: Eina01-Semi-Bold;
-    font-weight: 300;
-    font-size: clamp(1rem, 0.6rem + 2vw, 3rem);
-    text-align: center;
-    letter-spacing: 0.2rem;
-    color: #006493;
-  }
+header .card-body {
+  background-color: white;
+}
 
-  /** IMAGEN/TEXTO BIO **/
-  header .card {
+header .col-md-4 {
+  width: fit-content;
+}
 
-    width: 100%;
-    border: none;
-  }
+header .row {
+  justify-content: space-evenly;
+}
+/** ESTILO TEXTO BIO **/
+header .card-text {
+  font-family: Eina01-Regular;
+  color: #006493;
+  letter-spacing: 0.1rem;
+  text-align: justify;
+  margin: 0;
+  font-size: clamp(0.75rem, 0.65rem + 0.5vw, 1.25rem);
+  padding: 1rem;
+}
 
-  header .card-body {
+/*** MAIN ***/
 
-    background-color: white;
-  }
+/** TITULO EXPOS **/
+main h2 {
+  font-family: Eina01-Semi-Bold;
+  letter-spacing: 0.15rem;
+  font-size: clamp(1rem, 0.8rem + 1vw, 2rem);
+  color: #006493;
+  text-align: center;
+  margin: 0;
+}
 
-  header .col-md-4 {
+/** ESTILO TARJETAS **/
+.card {
+  border-color: #006493;
+  width: 25rem;
+}
 
-    width: fit-content;
-  }
+.marco {
+  width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+  height: 15rem; /* Ajusta la altura automáticamente */
+  margin-bottom: 0;
+  overflow: hidden; /* Oculta cualquier contenido que se salga del contenedor */
+}
 
-  header .row{
+.marco img {
+  width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+  height: 100%; /* Ajusta la altura de la imagen al 100% del contenedor */
+  object-fit: cover; /* Asegura que la imagen se recorte para llenar el contenedor */
+}
 
-    justify-content: space-evenly;
-  }
-  /** ESTILO TEXTO BIO **/
-  header .card-text {
-    font-family: Eina01-Regular;
-    color: #006493;
-    letter-spacing: 0.1rem;
-    text-align: justify;
-    margin: 0;
-    font-size: clamp(0.75rem, 0.65rem + 0.5vw, 1.25rem);
-    padding: 1rem;
-  }
+.card-title {
+  font-family: Eina01-Semi-Bold;
+  color: #006493;
+  letter-spacing: 0.2rem;
+}
 
-  /*** MAIN ***/
+.card-text {
+  font-family: Eina01-Semi-Bold;
+  color: #006493;
+  letter-spacing: 0.1rem;
+}
 
-  /** TITULO EXPOS **/
-  main h2{
+.filaCards {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
 
-     font-family: Eina01-Semi-Bold;
-     letter-spacing: 0.15rem;
-     font-size: clamp(1rem, 0.8rem + 1vw, 2rem);
-     color: #006493;
-     text-align: center;
-     margin: 0;
-  }
+.card-body {
+  background-color: #c67a791a;
+}
 
-  /** ESTILO TARJETAS **/
-  .card {
-    border-color: #006493;
-    width: 25rem;
-  }
+.card-text-Margen {
+  margin-bottom: 0;
+}
 
-  .marco {
-    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
-    height: 15rem; /* Ajusta la altura automáticamente */
-    margin-bottom: 0;
-    overflow: hidden; /* Oculta cualquier contenido que se salga del contenedor */
-  }
-  
-  .marco img {
-    width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
-    height: 100%; /* Ajusta la altura de la imagen al 100% del contenedor */
-    object-fit: cover; /* Asegura que la imagen se recorte para llenar el contenedor */
-  }
+.separadorBio {
+  height: 10vh;
+}
 
-  .card-title {
-    font-family: Eina01-Semi-Bold;
-    color: #006493;
-    letter-spacing: 0.2rem;
-  }
+.card-oculta {
+  visibility: hidden;
+}
 
-  .card-text {
-    font-family: Eina01-Semi-Bold;
-    color: #006493;
-    letter-spacing: 0.1rem;
-  }
+#publicForma h3 {
+  font-family: Eina01-Semi-Bold;
+  font-size: clamp(1rem, 0.85rem + 0.75vw, 1.75rem);
+  color: #006493;
+}
 
-  .filaCards {
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-  }
+#publicForma p {
+  font-family: Eina01-Regular;
+  font-size: clamp(0.75rem, 0.65rem + 0.5vw, 1.25rem);
+  color: #006493;
+  letter-spacing: 0.1rem;
+}
 
-  .card-body {
-    background-color: #c67a791a;
-  }
+#publicForma h2 {
+  text-align: left;
+}
 
-  .card-text-Margen {
-    margin-bottom: 0;
-  }
-
-  .separadorBio {
-    height: 10vh;
-  }
-
-  .card-oculta{
-
-     visibility: hidden;
-  }
-
-  #publicForma h3{
-
-     font-family: Eina01-Semi-Bold;
-     font-size: clamp(1rem, 0.85rem + 0.75vw, 1.75rem);
-     color: #006493;
-  }
-
-  #publicForma p{
-
-     font-family: Eina01-Regular;
-     font-size: clamp(0.75rem, 0.65rem + 0.5vw, 1.25rem);
-     color: #006493;
-     letter-spacing: 0.1rem;
-  }
-
-  #publicForma h2 {
-
-     text-align: left;
-  }
-
-  /** FOOTER **/
+/** FOOTER **/
 footer {
-
   width: 50vw;
   margin: auto;
 }
 
 #redes {
-
   display: flex;
   position: relative;
   top: 2rem;
@@ -192,57 +179,59 @@ footer {
 }
 
 #redes a {
-
   width: 25%;
 }
 
 #redes img {
-
   max-width: 35%;
   margin: auto;
 }
 
 #redes img:hover {
-
   transform: scale(1.15);
 }
 
 #figurePie {
-
   display: flex;
   width: 100%;
   margin: auto;
 }
 
 #figurePie img {
-
   max-width: 100%;
   margin: auto;
 }
 
 @media (max-width: 1600px) {
-
   main .card {
-
-    width: 25rem;
+    width: 22rem;
   }
-
 }
 
-@media (max-width: 1350px) {
-
+@media (max-width: 1200px) {
   main .card {
-
-    width: 23rem;
+    width: 18rem;
   }
-
 }
 
-@media (max-width: 710px) {
+@media (max-width: 1000px) {
+  main .card {
+    width: 15rem;
+  }
+}
 
-  .filaCards{
-
-    display: block;
+@media (max-width: 720px) {
+  .filaCards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
+  .margincard {
+    margin-bottom: 5vh;
+  }
+
+  .card-oculta {
+    display: none;
+  }
 }
