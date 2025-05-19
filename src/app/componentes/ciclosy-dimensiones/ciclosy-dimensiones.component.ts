@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { Swiper } from 'swiper/bundle';
 import 'swiper/css/bundle';
 import { MenuPrincipalComponent } from '../menu-principal/menu-principal.component';
+import { FooterComponent } from "../footer/footer.component";
 
 @Component({
   selector: 'app-ciclosy-dimensiones',
-  imports: [MenuPrincipalComponent],
+  imports: [MenuPrincipalComponent, FooterComponent],
   templateUrl: './ciclosy-dimensiones.component.html',
   styleUrl: './ciclosy-dimensiones.component.css'
 })
