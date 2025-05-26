@@ -6,7 +6,7 @@ import { LoginComponent } from '../login/login.component';
 
 @Component({
   selector: 'app-datos-basicos',
-  imports: [UsuariosComponent,LoginComponentgit ],
+  imports: [UsuariosComponent,LoginComponent ],
   templateUrl: './datos-basicos.component.html',
   styleUrl: './datos-basicos.component.css'
 })

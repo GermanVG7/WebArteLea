@@ -12,8 +12,10 @@ app.use(express.urlencoded({extended:false}))/*para interpretar formularios */
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'Root.123456',
-    database: 'db_usuarios'
+    // password: 'Root.123456',
+    password: '',
+    // database: 'db_usuarios'
+    database: 'usuarios'
 });
 db.connect((err)=>{
   if (err) {
