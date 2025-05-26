@@ -7,12 +7,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class LoginService {
-  private loginUrl = 'http://localhost:3000/login';
+  private loginUrl = 'http://localhost:3000/datos-basicos';
 
   constructor(private http: HttpClient) { }
 
-//login
-login(user: Login): Observable<Login>{
+// obtener formulario login
+getLogin(user: Login): Observable<Login>{
   return this.http.get<Login>(this.loginUrl);
 }
 
