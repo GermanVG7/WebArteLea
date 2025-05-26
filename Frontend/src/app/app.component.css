@@ -12,6 +12,10 @@
   background-size: 100%;
   background-image: url("../assets/imagenes/inicio/OtrasFomas.jpg");
 }
+i{
+  color: aliceblue;
+  font-size: 1.2rem;
+}
 
 #menuInicio {
   display: flex;
@@ -64,6 +68,9 @@
 }
 
 #idiomasInicio li {
+  display: flex;
+  align-items: center;
+  height: 3rem;
   font-size: clamp(0.5rem, 0.4rem + 0.5vw, 1rem);
   color: white;
   padding: 0.5rem;

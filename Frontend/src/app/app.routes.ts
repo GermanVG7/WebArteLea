@@ -10,6 +10,7 @@ import { CiclosyDimensionesComponent } from './componentes/ciclosy-dimensiones/c
 import { LoginComponent } from './componentes/login/login.component';
 import { PaginaError404Component } from './componentes/pagina-error404/pagina-error404.component';
 import { Component } from '@angular/core';
+import { UsuariosComponent } from './componentes/usuarios/usuarios.component';
 
 
 export const routes: Routes = [
@@ -20,9 +21,9 @@ export const routes: Routes = [
     {path: 'blog', component: BlogComponent}, 
     {path: 'contacto', component: ContactoComponent}, 
     {path: 'datos-basicos',component:DatosBasicosComponent},
-
     {path: 'formas-de-vida', component: FormasDeVidaComponent},
     {path: 'ciclos-dimensiones', component: CiclosyDimensionesComponent},
-    {path: 'app-pagina-error404', component: PaginaError404Component},
+    {path: 'login', component: LoginComponent},
+    {path: 'usuarios', component: UsuariosComponent},
     {path: '**', component: PaginaError404Component}
 ];
