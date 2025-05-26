@@ -15,8 +15,15 @@ export class AppComponent {
   constructor(private router: Router) {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        this.mostrar = !event.url.includes('/biografia') && !event.url.includes('/datos-basicos') && !event.url.includes('/proyectos')
-          && !event.url.includes('/blog') && !event.url.includes('/contacto') && !event.url.includes('/formas-de-vida') && !event.url.includes('/ciclos-dimensiones');
+        this.mostrar = !event.url.includes('/biografia') 
+        && !event.url.includes('/app-pagina-error404') 
+        && !event.url.includes('/datos-basicos')
+        && !event.url.includes('/proyectos')
+        && !event.url.includes('/login')
+        && !event.url.includes('/blog') 
+        && !event.url.includes('/contacto')
+        && !event.url.includes('/formas-de-vida')
+        && !event.url.includes('/ciclos-dimensiones');
       }
     });
   }

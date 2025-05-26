@@ -1,6 +1,8 @@
 const express = require('express');
 const mysql = require('mysql2');
-const cors = require('cors');
+const cors = require('cors');/**mecanismo de seguridad implementado por los navegadores para restringir o permitir solicitudes HTTP entre diferentes dominios. */
+const bodyParser = require('body-parser');/**para asignar valores del formulario en body a variables  */
+const encoder = bodyParser.urlencoded();/**definicion de onjeto doby-parser */
 
 const app = express();
 app.use(cors());
@@ -18,9 +20,35 @@ db.connect((err)=>{
     console.log(`error al conectar en la base de datos WebArteLea ${err}`);
     
   } else {
-    console.log(`Conectado a la bbdd WebArteLea`);
+    console.log(`Conectado a la bbdd db_usuarios`);
   }
 });
+/** ------------------ login --------------- */
+// app.post("/login",encoder, function(req,res){
+//     var username = req.body.username;
+//     var password = req.body.password;/** variables locales */
+//     //implementacion con desestructuracion 
+//     // const {username,password}= req.body;
+// //usuario root@123
+// //password 123
+//     connection.query("select * from loginuser where user_name = ? and user_pass = ?",[username,password],function(error,results,fields){
+//         if (results.length > 0) {
+//             // res.redirect("http://localhost:4200/login");
+//         } else {
+//             // res.redirect("http://localhost:4200/login");
+//         }
+//         console.log('conectado a ddbb WebArteLea post de login');
+        
+//         res.end();
+//     })
+// })
+app.post('/login',(req,res)=>{
+  const {username,password}= req.body;
+  console.log(`exito ${ username} y ${password}`);
+  res.json()
+})
+
+
 
 /* ------- Endpoints (routing) a consumir ---------*/
 
