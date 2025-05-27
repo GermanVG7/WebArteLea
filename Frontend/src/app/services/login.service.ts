@@ -12,8 +12,9 @@ export class LoginService {
   constructor(private http: HttpClient) { }
 
 // obtener formulario login
-getLogin(user: Login): Observable<Login>{
-  return this.http.get<Login>(this.loginUrl);
+getLogin(): Observable<Login[]>{
+  console.log('getLogin start en services');
+  return this.http.get<Login[]>(this.loginUrl);
 }
 
 

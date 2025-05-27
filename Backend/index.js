@@ -25,64 +25,40 @@ db.connect((err)=>{
     console.log(`Conectado a la bbdd db_usuarios`);
   }
 });
-/** ------------------ login --------------- */
-app.get("/login",function(req,res){
-    res.sendFile(__dirname + "Frontend/src/app/componentes/login/login.component.html");
-})
-
+/** ------------------Endpoints login --------------- 
+ * URL o ruta específica en  servidor backend a la que los clientes  pueden enviar solicitudes HTTP (GET, POST, PUT, DELETE)
+*/
+app.get("/login", encoder, function(req, res) {
+  if (true) {
+    res.redirect('http://localhost:4200/usuarios');
+  } else {
+    console.log('no econtro pagina');
+    res.redirect('http://localhost:4200/login');
+  }
+  
+});
+// app.post("/login", encoder, function(req, res) {
+//   res.redirect('http://localhost:4200/usuarios');
+// });
 app.post("/",encoder, function(req,res){
     var username = req.body.username;
     var password = req.body.password;
 
-    connection.query("select * from usuarios where nombre = ? and email = ?",[username,password],function(error,results,fields){
+    connection.query("select * from loginuser where user_name = ? and user_pass = ?",[username,password],function(error,results,fields){
         if (results.length > 0) {
-          console.log(`usuario ${username} y contraseña ${password} correctos`);
-          
-            res.redirect("/Frontend/src/app/componentes/login/login.component.html");
+            res.redirect("/welcome");
         } else {
-          console.log(`usuario ${username} y contraseña ${password} incorrectos`);
-          
-            res.redirect("/Frontend/src/app/componentes/login/login.component.html");
+            res.redirect("/welcome");
         }
         res.end();
     })
 })
 
-// when login is success
-app.get("/login",function(req,res){
-    res.sendFile(__dirname + "/Frontend/src/app/componentes/login/login.component.html")
-})
-
-// app.post("/login",encoder, function(req,res){
-//     var username = req.body.username;
-//     var password = req.body.password;/** variables locales */
-//     //implementacion con desestructuracion 
-//     // const {username,password}= req.body;
-// //usuario root@123
-// //password 123
-//     connection.query("select * from loginuser where user_name = ? and user_pass = ?",[username,password],function(error,results,fields){
-//         if (results.length > 0) {
-//             // res.redirect("http://localhost:4200/login");
-//         } else {
-//             // res.redirect("http://localhost:4200/login");
-//         }
-//         console.log('conectado a ddbb WebArteLea post de login');
-        
-//         res.end();
-//     })
-// })
-// app.post('/login',(req,res)=>{
-//   const {username,password}= req.body;
-//   console.log(`exito ${ username} y ${password}`);
-//   res.json()
-// })
 
 
 
 
-
-
-/* ------- Endpoints (routing) a consumir ---------*/
+/* ------- Endpoints (routing) para usuarios ---------*/
 
 // CREATE
 app.post('/usuarios', (req, res) => {
