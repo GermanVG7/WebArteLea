@@ -12,10 +12,10 @@ app.use(express.urlencoded({extended:false}))/*para interpretar formularios */
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    // password: 'Root.123456',
-    password: '',
-    // database: 'db_usuarios'
-    database: 'usuarios'
+    password: 'Root.123456',
+    // password: '',
+    database: 'db_usuarios'
+    // database: 'usuarios'
 });
 db.connect((err)=>{
   if (err) {
@@ -26,6 +26,33 @@ db.connect((err)=>{
   }
 });
 /** ------------------ login --------------- */
+app.get("/login",function(req,res){
+    res.sendFile(__dirname + "Frontend/src/app/componentes/login/login.component.html");
+})
+
+app.post("/",encoder, function(req,res){
+    var username = req.body.username;
+    var password = req.body.password;
+
+    connection.query("select * from usuarios where nombre = ? and email = ?",[username,password],function(error,results,fields){
+        if (results.length > 0) {
+          console.log(`usuario ${username} y contraseña ${password} correctos`);
+          
+            res.redirect("/Frontend/src/app/componentes/login/login.component.html");
+        } else {
+          console.log(`usuario ${username} y contraseña ${password} incorrectos`);
+          
+            res.redirect("/Frontend/src/app/componentes/login/login.component.html");
+        }
+        res.end();
+    })
+})
+
+// when login is success
+app.get("/login",function(req,res){
+    res.sendFile(__dirname + "/Frontend/src/app/componentes/login/login.component.html")
+})
+
 // app.post("/login",encoder, function(req,res){
 //     var username = req.body.username;
 //     var password = req.body.password;/** variables locales */
@@ -44,11 +71,14 @@ db.connect((err)=>{
 //         res.end();
 //     })
 // })
-app.post('/login',(req,res)=>{
-  const {username,password}= req.body;
-  console.log(`exito ${ username} y ${password}`);
-  res.json()
-})
+// app.post('/login',(req,res)=>{
+//   const {username,password}= req.body;
+//   console.log(`exito ${ username} y ${password}`);
+//   res.json()
+// })
+
+
+
 
 
 
