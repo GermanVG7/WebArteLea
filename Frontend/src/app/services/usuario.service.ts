@@ -14,6 +14,7 @@ export class UsuarioService {
 
 
   // Obtener todos los usuarios
+  /**Dentro del método, se utiliza el cliente HTTP de Angular (this.http) para realizar una petición GET a la URL almacenada en this.apiUrl */
   getUsuarios(): Observable<Usuario[]> {
     return this.http.get<Usuario[]>(this.apiUrl);
   }

@@ -12,15 +12,14 @@ app.use(express.urlencoded({extended:false}))/*para interpretar formularios */
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'Root.123456',
-    // password: '',
-    database: 'db_usuarios'
-    // database: 'usuarios'
+    // password: 'Root.123456',
+    password: '',
+    // database: 'db_usuarios'
+    database: 'usuarios'
 });
 db.connect((err)=>{
   if (err) {
-    console.log(`error al conectar en la base de datos WebArteLea ${err}`);
-    
+    console.log(`error al conectar en la base de datos WebArteLea`);
   } else {
     console.log(`Conectado a la bbdd db_usuarios`);
   }
@@ -28,33 +27,59 @@ db.connect((err)=>{
 /** ------------------Endpoints login --------------- 
  * URL o ruta específica en  servidor backend a la que los clientes  pueden enviar solicitudes HTTP (GET, POST, PUT, DELETE)
 */
-app.get("/login", encoder, function(req, res) {
-  if (true) {
-    res.redirect('http://localhost:4200/usuarios');
-  } else {
-    console.log('no econtro pagina');
-    res.redirect('http://localhost:4200/login');
-  }
+app.get('/login1', (req, res) => {
+   req.body
+   console.log(req.body);
+   
+   res.send('hola login')
+
+    // res.json(req.body)
+  //   db.query('SELECT * FROM usuarios', (err, result) => {
   
+  //   if (err) return res.json(err);
+  //   console.log(`get al servidor mysql con login con usuarios admin`);
+  //   // res.json(req.body);
+  //   res.send('hola login')
+  //   //  res.redirect('/usuarios');
+  // });
 });
-// app.post("/login", encoder, function(req, res) {
-//   res.redirect('http://localhost:4200/usuarios');
+
+app.get('/login2', (req, res) => {
+  const { username, password } = req.body;
+  /*(?)  marcadores de posición para evitar inyecciones SQL y mejorar la seguridad. Los valores reales para estos parámetros, nombre y email, se pasan en el arreglo [nombre, email]  y una función de callback */
+  db.query('INSERT INTO usuarios (nombre, email) VALUES (?, ?)', [username, password], (err, result) => {
+    if (err) return res.json(err);
+    console.log(`el id es: `);
+    res.json(result);
+  });
+});
+
+// app.get("/login", encoder, function(req, res) {
+//   if (true) {
+//     // res.send('login fail')
+//     console.log(req.body);
+    
+//     res.redirect('http://localhost:4200/login');
+
+//   } else {
+//     res.redirect('http://localhost:4200/usuarios');
+    
+//   }
+//     // res.redirect('/usuarios')
 // });
-app.post("/",encoder, function(req,res){
-    var username = req.body.username;
-    var password = req.body.password;
 
-    connection.query("select * from loginuser where user_name = ? and user_pass = ?",[username,password],function(error,results,fields){
-        if (results.length > 0) {
-            res.redirect("/welcome");
-        } else {
-            res.redirect("/welcome");
-        }
-        res.end();
-    })
-})
-
-
+// app.post("/login",encoder, function(req,res){
+//     var username = req.body.username;
+//     var password = req.body.password;
+//     connection.query("select * from usuario where nombre = ? and email = ?",[username,password],function(error,results,fields){
+//         if (results.length > 0) {
+//             res.redirect("/login");
+//         } else {
+//             res.redirect("/login");
+//         }
+//         res.end();
+//     })
+// })
 
 
 
@@ -75,7 +100,7 @@ app.post('/usuarios', (req, res) => {
 app.get('/usuarios', (req, res) => {
   db.query('SELECT * FROM usuarios', (err, result) => {
     if (err) return res.json(err);
-    console.log(`get al servidor mysql`);
+    console.log(`get al servidor mysql con usuarios`);
     res.json(result);
   });
 });
