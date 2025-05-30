@@ -14,7 +14,8 @@ import { Login } from '../../models/login';//clase Login
 })
 export class LoginComponent implements OnInit {
   users: Login[] =[];
-  user: Login= {username:'', password:''};
+  user: Login = { nombre: '', email: '', userName:'', user_pass:'' };
+
   login: boolean = false;
   idUser: number | null = null;
 
@@ -26,18 +27,19 @@ ngOnInit(): void {
     
 }
 getLogin(): void {
-   
   this.userLoginService.getLogin().subscribe(data =>{
-    this.users = data ;
-    console.log('en cuerpo metodo getlogin');
-    // console.log(this.users);
+  this.users = data ;
+  console.log('en cuerpo metodo getlogin');
+  //impremi un atributo del objeto user
+  console.log(this.users);
+  
+  console.log(this.users[0].nombre);
+  console.log(this.users[0].email);
+  console.log(this.users[0].id);
+  console.log(this.users[0].userName);
+  console.log(this.users[0].user_pass);
+  console.log(this.users.length);
   });
-//   http.get<Config>('/api/config').subscribe(config => {
-//   // process the configuration.
-// });
-
 }
-
-
 }
 

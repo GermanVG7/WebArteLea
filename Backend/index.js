@@ -9,13 +9,14 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended:false}))/*para interpretar formularios */
 
+
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    // password: 'Root.123456',
-    password: '',
-    // database: 'db_usuarios'
-    database: 'usuarios'
+    password: 'Root.123456',
+    // password: '',
+    database: 'db_usuarios'
+    // database: 'usuarios'
 });
 db.connect((err)=>{
   if (err) {
@@ -27,27 +28,22 @@ db.connect((err)=>{
 /** ------------------Endpoints login --------------- 
  * URL o ruta específica en  servidor backend a la que los clientes  pueden enviar solicitudes HTTP (GET, POST, PUT, DELETE)
 */
-app.get('/login1', (req, res) => {
-   req.body
-   console.log(req.body);
-   
-   res.send('hola login')
-
-    // res.json(req.body)
-  //   db.query('SELECT * FROM usuarios', (err, result) => {
-  
-  //   if (err) return res.json(err);
-  //   console.log(`get al servidor mysql con login con usuarios admin`);
-  //   // res.json(req.body);
-  //   res.send('hola login')
-  //   //  res.redirect('/usuarios');
-  // });
+app.get('/login', (req, res) => {
+    db.query('SELECT * FROM usuarios WHERE id = 32', (err, result) => {
+    if (err) return res.json(err);
+    console.log(`get al servidor mysql con login con usuarios admin`);
+    console.log(result);
+    
+   res.send(result)
+    //  res.redirect('/usuarios');
+      //  res.send('hola login')
+  });
 });
 
 app.get('/login2', (req, res) => {
-  const { username, password } = req.body;
+  // const { username, password } = req.body;
   /*(?)  marcadores de posición para evitar inyecciones SQL y mejorar la seguridad. Los valores reales para estos parámetros, nombre y email, se pasan en el arreglo [nombre, email]  y una función de callback */
-  db.query('INSERT INTO usuarios (nombre, email) VALUES (?, ?)', [username, password], (err, result) => {
+  db.query('INSERT INTO usuarios (nombre, email) VALUES (?, ?)', ['username', 'password'], (err, result) => {
     if (err) return res.json(err);
     console.log(`el id es: `);
     res.json(result);
@@ -89,7 +85,7 @@ app.get('/login2', (req, res) => {
 app.post('/usuarios', (req, res) => {
   const { nombre, email, id } = req.body;
   /*(?)  marcadores de posición para evitar inyecciones SQL y mejorar la seguridad. Los valores reales para estos parámetros, nombre y email, se pasan en el arreglo [nombre, email]  y una función de callback */
-  db.query('INSERT INTO usuarios (nombre, email) VALUES (?, ?)', [nombre, email], (err, result) => {
+  db.query('INSERT INTO usuarios (nombre, email) VALUES (?, ?) ', [nombre, email], (err, result) => {
     if (err) return res.json(err);
     console.log(`el id es: ${id}`);
     res.json(result);
