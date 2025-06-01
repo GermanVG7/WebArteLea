@@ -30,25 +30,8 @@ db.connect((err)=>{
 /** ------------------Endpoints login --------------- 
  * URL o ruta específica en  servidor backend a la que los clientes  pueden enviar solicitudes HTTP (GET, POST, PUT, DELETE)
 */
-// app.get('/login', (req, res) => {
-// console.log(req.body);
-//   // const { userName, password } = req.body;
-//   // console.log(`username: ${userName}, password: ${password}`);
-  
-
-//     db.query('SELECT * FROM usuarios WHERE id = 32', (err, result) => {
-//     if (err) return res.json(err);
-//     console.log(`get al servidor mysql con login con usuarios admin `);
-//     console.log(result);
-    
-//    res.send(result)
-//    
-//   });
-// });
-
 app.get('/login/:user/:password',(req,res)=>{
 
-// console.log(`respuesta del server 3000 ${req.params.password} ${req.params.user}`);
   
 console.log(req.params);
    db.query('SELECT * FROM usuarios WHERE userName =? and user_pass =? ',[req.params.user,req.params.password], (err, result) => {
@@ -56,20 +39,13 @@ console.log(req.params);
     console.log(`get al servidor mysql con login con usuarios admin `);
     console.log(result.length);
     //validar si el usuario existe
-    
     if (result.length == 1) {
       console.log(`Usuario encontrado:`);
        res.json({redirect: '/usuarios',result: result});
     }
-   
   });
-  // res.json({
-  //   message: `Bienvenido ${req.params.user}, tu contraseña es ${req.params.password}`
-  // });
-//   res.json({
-//   redirect: '/usuarios'
-// });
-})
+});
+
 /* ------- Endpoints (routing) para usuarios ---------*/
 
 // CREATE
@@ -99,7 +75,6 @@ app.put('/usuarios/:id', (req, res) => {
   db.query('UPDATE usuarios SET nombre = ?, email = ? WHERE id = ?', [nombre, email, id], (err, result) => {
     if (err) return res.json(err);
     res.json(result);
-    //  res.redirect('https://www.google.com/');
   });
 });
 
