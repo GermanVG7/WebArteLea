@@ -12,10 +12,17 @@ export class LoginService {
   constructor(private http: HttpClient) { }
 
 // obtener un usuario 
-getLogin(): Observable<Login[]>{
-  console.log(`getLogin inicio en services ${this.loginUrl}`);
-  return this.http.get<Login[]>(this.loginUrl);
+// getLogin(): Observable<Login[]>{
+//   console.log(`getLogin inicio en services ${this.loginUrl}`);
+//   return this.http.get<Login[]>(this.loginUrl);
+// }
+//obetener un usuario por id
+getLoginById(user: string, password: string): Observable<any> {
+  console.log(`getLoginById inicio en services ${this.loginUrl}/${user}/${password}`);
+  return this.http.get(`${this.loginUrl}/${user}/${password}`);
 }
+
+
 
 
 }
