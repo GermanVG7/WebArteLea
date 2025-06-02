@@ -19,14 +19,9 @@ export class LoginComponent {
   //sincornizar el formulario con la clase Login
   user: Login = { nombre: '', email: '', userName:'', user_pass:'' }; //inicializar los campos de la clase Login
   login: boolean = false;
-  // idUser: number | null = null;
 
   constructor(private userLoginService: LoginService,private http: HttpClient,private router: Router){}
-  // SE LANZA AUTOMATICAMENTE AL MOSTRAR EL COMPONENTE
-// ngOnInit(): void {
-//   console.log('onInit start login');
-//     // this.getLogin();
-// }
+
 getLogin(user:string, password:string): void {
   
   console.log('Start login metodo getLogin');
@@ -34,38 +29,21 @@ getLogin(user:string, password:string): void {
   console.log(`pasword del formulario : ${this.user.user_pass}`)
 //solicitar el servicio al servidor login en port 3000
 
-
-// this.userLoginService.getLoginById(user,password).subscribe(data =>{
-//   console.log(data);
-//   this.userLogin = data;
-//   console.log(this.userLogin);
-  
-  
-// }); 
-
-
-
-
-// redireccionar al usuario si el login es correcto
-// if (this.userLogin.length > 0) {
-//   console.log('Login correcto');
-//   this.login = true;
-//   // Redirigir al usuario a la página de inicio o dashboard
-//   this.router.navigate(['/home']);
-// }
-// else {
-//   console.log('Login incorrecto');
-//   this.login = false;
-//   // Mostrar un mensaje de error o realizar alguna acción adicional
-// }
 this.http.get<any>(`http://localhost:3000/login/${user}/${password}`).subscribe(res => {
-  if (res.redirect) {
-  // console.log('Login correcto, redirigiendo a:', res.redirect);
-    this.router.navigate([res.redirect]);
-  }
-  // ...otros manejos de respuesta...
-});
+
+  console.log('Respuesta del servidor:', res.redirect);
   
+  if (res.redirect === '/usuarios') {
+  console.log('Login correcto, redirigiendo a:', res.redirect);
+  alert('Login correcto');
+    this.router.navigate([res.redirect]);
+  }else if (res.redirect === '/login') {
+    console.log('Login incorrecto, redirigiendo a:', res.redirect);
+    alert('Usuario o contraseña incorrectos');
+    this.router.navigate(['/']);
+  } 
+});
+ 
 }
 
 }

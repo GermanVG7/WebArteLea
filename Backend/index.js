@@ -42,7 +42,7 @@ console.log(req.params);
     if (result.length == 1) {
       console.log(`Usuario encontrado:`);
        res.json({redirect: '/usuarios',result: result});
-    }
+    }else res.json({redirect: '/login', result: result, message: 'Usuario o contraseña incorrectos'});
   });
 });
 
