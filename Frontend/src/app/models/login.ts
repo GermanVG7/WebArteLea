@@ -4,6 +4,4 @@ export class Login {
     email: string = "";
     userName: string = "";
     user_pass: string = "";
-
-
 }

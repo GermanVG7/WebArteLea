@@ -12,7 +12,7 @@ import { Usuario } from '../../models/usuario';
 })
 export class UsuariosComponent implements OnInit {
   usuarios: Usuario[] = [];
-  usuario: Usuario = { nombre: '', email: '' };
+  usuario: Usuario = { nombre: '', email: '', userName: '', user_pass:'' };
   editando: boolean = false;
   idEditando: number | null = null;
 
@@ -63,7 +63,7 @@ export class UsuariosComponent implements OnInit {
 
   // RESTABLECER EL FORMULARIO A SU ESTADO ORIGINAL
   resetFormulario(): void {
-    this.usuario = { nombre: '', email: '' };
+    this.usuario = { nombre: '', email: '',userName:'',user_pass:'' };
     this.editando = false;
     this.idEditando = null;
   }

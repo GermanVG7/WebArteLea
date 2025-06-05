@@ -11,7 +11,7 @@
   font-family: Eina01-Semi-Bold;
   background-size: 100%;
   background-image: url("../assets/imagenes/inicio/OtrasFomas.jpg");
-  opacity: 0;
+  /* opacity: 0; */
   animation: fondo 0.7s ease-in forwards;/*forwards asegura que, al terminar la animación, el elemento mantenga el estado final*/
 }
 @keyframes fondo {
