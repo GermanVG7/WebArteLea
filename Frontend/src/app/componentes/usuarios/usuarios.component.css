@@ -5,7 +5,7 @@ section {
   width: 100%;
   height: 100vh;
   font-family: Eina01-Semi-Bold;
-  background: linear-gradient(to right, #cf977c, #9a8278);
+  background: linear-gradient(0.25turn, #cf977c,#f6f6f6, #9a8278);
 }
 h2 {
   text-align: center;
