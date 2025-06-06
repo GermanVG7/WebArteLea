@@ -3,12 +3,15 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { UsuarioService } from '../../services/usuario.service';
 import { Usuario } from '../../models/usuario';
+import { RouterLink } from '@angular/router';
+
 
 @Component({
   selector: 'app-usuarios',
   standalone: true,
-  imports: [CommonModule, FormsModule],
-  templateUrl: './usuarios.component.html'
+  imports: [CommonModule, FormsModule,RouterLink],
+  templateUrl: './usuarios.component.html',
+  styleUrl: './usuarios.component.css'
 })
 export class UsuariosComponent implements OnInit {
   usuarios: Usuario[] = [];
