@@ -1,0 +1,11 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+
+  font-family: Eina01-Semi-Bold;
+  src: url(../src/assets/fuentes/Eina01-SemiBold.ttf);
+}

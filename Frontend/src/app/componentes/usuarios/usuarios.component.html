@@ -1,0 +1,117 @@
+<section>
+<!-- Contenedor con Bootstrap -->
+<div class="container ">
+    <!-- capturar el nombre de usuario en la etiqueta a -->
+
+    <a routerLink="/" ><li >Cerrar <i class="bi bi-box-arrow-left" ></i>
+     </li></a>
+    <h2 class="mb-3  text-center">Gestión de Usuarios</h2>  
+        <!-- Formulario para agregar o editar usuario -->
+        <form (ngSubmit)="guardarUsuario()" class="card p-4 shadow-sm mb-4">
+        <div class="row g-3">
+
+            <!-- Campo nombre -->
+            <div class="form-floating col-md-5">
+            <input
+                type="text"
+                class="form-control"
+                [(ngModel)]="usuario.nombre"
+                name="nombre"
+                placeholder="Nombre"
+                required
+            />
+            <label for="nombre">Nombre</label>
+            </div>
+
+            <!-- Campo email -->
+            <div class="form-floating col-md-5">
+            <input
+                type="email"
+                class="form-control"
+                [(ngModel)]="usuario.email"
+                name="email"
+                placeholder="Email"
+                required
+            />
+            <label for="email">Email</label>
+            </div>
+            <div class="col-md-2 d-grid gap-2">
+                 <button type="submit" class="btn btn-primary">
+                {{ editando ? 'Actualizar' : 'Agregar' }}
+            </button>
+            </div>
+              <!-- Campo nombre de usuario -->
+            <div class="form-floating col-md-5">
+            <input
+                type="text"
+                class="form-control"
+               [(ngModel)]="usuario.userName"
+                name="nom-usuario"
+                placeholder="Ingresar Nombre de Usuario"
+                required
+            />
+            <label for="nom-usuario">Nombre de Usuario</label>
+            </div>
+
+              <!-- Campo password -->
+            <div class="form-floating col-md-5">
+            <input
+            id="password-field"
+                type="text"
+                class="form-control"
+                [(ngModel)] ='usuario.user_pass'
+                name="password"
+                placeholder="Ingresar Contraseña"
+                required
+            />
+            <label for="password">Contraseña</label>
+            </div>
+
+            <!-- Botones: Agregar/Actualizar y Cancelar -->
+            <div class="col-md-2 d-grid gap-2">
+            <button
+                type="button"
+                class="btn btn-secondary"
+                *ngIf="editando"
+                (click)="resetFormulario()"
+            >
+                Cancelar
+            </button>
+            </div>
+        </div>
+        </form>
+    
+        <!-- Tabla para mostrar usuarios -->
+
+        <table class="table table-bordered table-hover shadow-sm">
+            <thead class="table-light">
+                <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Nombre de Usuario</th>
+                <th>Contraseña</th>
+                <th class="text-center">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let u of usuarios; let i = index">
+                <td>{{ u.id }}</td>
+                <td>{{ u.nombre }}</td>
+                <td>{{ u.email }}</td>
+                <td>{{ u.userName }}</td>
+                <td>{{ u.user_pass }}</td>
+                <td class="text-center">
+                    <button class="btn btn-sm btn-warning me-2" (click)="editar(u)">Editar</button>
+                    <button class="btn btn-sm btn-danger" (click)="eliminar(u.id!)">Eliminar</button>
+                </td>
+                </tr>
+            </tbody>
+        </table>
+</div>
+</section>
+
+
+
+
+  

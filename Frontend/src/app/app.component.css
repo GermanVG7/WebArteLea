@@ -1,0 +1,122 @@
+@font-face {
+
+  font-family: Eina01-Semi-Bold;
+  src: url(../assets/fuentes/Eina01-SemiBold.ttf);
+}
+
+.body {
+  width: 100wvw;
+  height: 100vh;
+  display: flex;
+  font-family: Eina01-Semi-Bold;
+  background-size: 100%;
+  background-image: url("../assets/imagenes/inicio/OtrasFomas.jpg");
+  /* opacity: 0; */
+  animation: fondo 0.7s ease-in forwards;/*forwards asegura que, al terminar la animación, el elemento mantenga el estado final*/
+}
+@keyframes fondo {
+  from {
+    opacity: 0;/*completamente transparente*/
+    background-size: 105%;
+    filter: blur(2px);
+  }
+  to {
+    opacity: 1;
+    background-size: 100%;
+    filter: blur(0);
+  }
+}
+/* .inViewPoint .fade-in [lazy=loaded],
+.navWrapper .fade-in [lazy=loaded] {
+  animation-name:fade-in;
+  animation-duration:1.2s;
+  animation-delay:.3s;
+  animation-timing-function:cubic-bezier(.215,.61,.355,1);
+  animation-fill-mode:backwards
+}
+.inViewPoint .fade-in[lazy=loaded],
+.navWrapper .fade-in[lazy=loaded] {
+  animation-name:fade-in
+
+} */
+/* 
+animacion al fondo del body al cargar el dom
+ */
+
+
+
+i{
+  color: aliceblue;
+  font-size: 1.2rem;
+}
+
+#menuInicio {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 50%;
+  margin: auto;
+}
+
+#menuInicio h1 {
+  font-size: clamp(2rem, 1.7rem + 1.5vw, 3.5rem);
+  color: white;
+  letter-spacing: 0.5rem;
+  text-align: center;
+}
+
+#menuInicio ul {
+  display: flex;
+  list-style: none;
+  margin: auto;
+}
+
+#menuInicio a {
+  text-decoration: none;
+}
+
+#menuInicio li {
+  text-align: center;
+  font-size: clamp(1rem, 0.7359rem + 0.8451vw, 1.75rem);
+  letter-spacing: 0.1rem;
+  color: white;
+  padding: 1rem;
+}
+
+#menuInicio li:hover {
+  text-decoration: underline;
+  background-color: #0064938e;
+}
+
+#idiomasInicio ul {
+  display: flex;
+  list-style: none;
+  position: absolute;
+  right: 5%;
+  top: 1%;
+}
+
+#idiomas a {
+  text-decoration: none;
+}
+
+#idiomasInicio li {
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  font-size: clamp(0.5rem, 0.4rem + 0.5vw, 1rem);
+  color: white;
+  padding: 0.5rem;
+}
+
+#idiomasInicio li:hover {
+  text-decoration: underline;
+  background-color: #c67a79a4;
+}
+
+@media screen and (max-width: 768px) {
+  #menuInicio ul {
+     flex-direction: column;
+  }
+
+}

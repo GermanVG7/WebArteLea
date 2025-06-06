@@ -1,0 +1,53 @@
+p{
+    text-align: center;
+}
+
+
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+    body{
+        background-color: #f2f2f23a;
+        height: 90vh;
+    }
+ #formulario{
+    width: 50vw;
+    height: 80vh
+ }
+ 
+#parte1{
+    width: 100%;
+    height: 80vh;
+    display: block;
+
+}
+#parte2{
+    width: 100%;
+    height: 84vh;
+    /* display: none; */
+   
+}
+#parte3{
+    width: 100%;
+    height: 84vh;
+    /* display: none; */
+}
+legend{
+    font-size: 1.2rem ;
+    font-weight: bold;
+    color: #6d6d6d;
+    
+}
+#content-genero{
+    background-color: #fff;
+    height: 5rem;
+} 
+#parte3 fieldset{
+    background-color: #fff;
+}
+h1, h4{
+    color: #28456f;
+    
+}

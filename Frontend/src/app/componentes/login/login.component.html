@@ -1,0 +1,35 @@
+<body>
+    <a routerLink="/"><i class="bi bi-house"></i></a>
+    <section class="box">
+        <div class="design">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="form">
+          <i class='bi bi-person'></i> 
+            <h2>User Login</h2>
+            <form (ngSubmit)="getLogin(user.userName,user.user_pass)" >
+                <input 
+                    type="text"
+                    class="input-field"
+                    name="username" 
+                    [(ngModel)]="user.userName"
+                    placeholder="Username"
+                    required
+                    />
+                <input
+                    type="password" 
+                    name="password" 
+                    class="input-field"
+                    placeholder="Password"
+                    [(ngModel)]="user.user_pass" 
+                    required/>
+                    <!-- [(ngModel)]="user.user_pass"  valor del campo de entrada (input) en el formulario y la propiedad user del objeto usuario en el componente TypeScript estarán siempre sincronizados. -->
+                    
+                <input type="submit" class="btn" value="LOGIN" />
+            </form>
+        </div>
+    </section>
+</body>
